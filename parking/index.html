@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Management System</title>
+
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Parking Management System</h1>
+    </header>
+
+    <section class="form-section">
+      <input type="text" id="vehicleNumber" placeholder="Vehicle Number" />
+      <input type="text" id="ownerName" placeholder="Owner Name" />
+      <input type="text" id="houseNumber" placeholder="House Number" />
+      <input type="text" id="contactNumber" placeholder="Contact Number" />
+      <button id="saveButton" onclick="saveVehicle()">Add Vehicle</button>
+    </section>
+
+    <section class="search-section">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search..."
+        oninput="searchRecords()"
+      />
+    </section>
+
+    <section class="table-section">
+      <table id="vehicleList">
+        <thead>
+          <tr>
+            <th>Vehicle Number</th>
+            <th>Owner Name</th>
+            <th>House Number</th>
+            <th>Contact Number</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Records will be rendered here -->
+        </tbody>
+      </table>
+    </section>
+
+    <button id="installButton" style="display: none">Install App</button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
